@@ -29,9 +29,9 @@ prepare_markdown() {
       # Change output extension
       CONVERTED="${SELECTED%.*}.md"
       # Convert .docx to .md
-      pandoc --smart \
+      pandoc \
       --read docx \
-      --write markdown \
+      --write markdown+smart \
       --wrap=preserve \
       --extract-media='inc/images' \
       "$SELECTED" \
