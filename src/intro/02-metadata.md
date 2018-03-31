@@ -1,8 +1,8 @@
 # { #metadati .hidden - }
 
-{+SMALL+}
+<div class="small">
 
-{+COMPACT RIGHT+}
+<div class="compact alignright">
 
 © 2011 - **Susa**
 
@@ -26,6 +26,8 @@ Associazione Culturale Libe Edizioni - Roma
 
 BOOK_ISBN
 
-{-COMPACT RIGHT-}
+</div>
 
-{-SMALL-}
+</div>
+
+
