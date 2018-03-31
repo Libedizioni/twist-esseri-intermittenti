@@ -92,8 +92,8 @@
 'build':
 - 'shell:build_epub'
 - 'shell:build_html'
-- 'shell:build_mobi'
 - 'shell:build_pdf'
+- 'shell:build_mobi'
 
 # --------------------------- #
 #   DEFAULT TASK
