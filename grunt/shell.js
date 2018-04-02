@@ -189,12 +189,12 @@ module.exports = {
 			'cd ../<%= book.name %>',
 			'rm -f "<%= pkg.dir.inc %>/title.yaml"',
 			'echo "---" >> "<%= pkg.dir.inc %>/title.yaml"',
-			'echo "title\n  - main: BOOK_TITLE" >> "<%= pkg.dir.inc %>/title.yaml"',
+			'echo "title: BOOK_TITLE" >> "<%= pkg.dir.inc %>/title.yaml"',
 			'echo "author: BOOK_AUTHOR" >> "<%= pkg.dir.inc %>/title.yaml"',
 			'echo "toc-title: TOC_TITLE" >> "<%= pkg.dir.inc %>/title.yaml"',
 			'echo "---" >> "<%= pkg.dir.inc %>/title.yaml"',
 			'echo "" >> "<%= pkg.dir.inc %>/title.yaml"',
-			'sed -i "s|BOOK_TITLE|<%= book.title %>|g" "<%= pkg.dir.inc %>/title.yaml"',
+			'sed -i "s|BOOK_TITLE|\'<%= book.title %>\'|g" "<%= pkg.dir.inc %>/title.yaml"',
 			'sed -i "s|BOOK_AUTHOR|<%= book.author.name %> <%= book.author.surname %>|g" "<%= pkg.dir.inc %>/title.yaml"',
 			'sed -i "s|TOC_TITLE|<%= book.toctitle %>|g" "<%= pkg.dir.inc %>/title.yaml"'
 		].join(' && ')
