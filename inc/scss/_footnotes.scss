@@ -1,3 +1,19 @@
 ///
 /// Footnotes
 ///
+
+a {
+	&.footnote-ref {
+		vertical-align: super;
+		padding: 0 .25em;
+		color: $notes_link_color;
+
+		&:hover {
+			color: $notes_link_hover;
+		}
+
+		&:focus {
+			color: $notes_link_focus;
+		}
+	}
+}

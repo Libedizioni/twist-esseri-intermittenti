@@ -24,6 +24,7 @@ prepare_markdown() {
   # loop all .docx files found:
   for SELECTED in $DOCX_FILES
     # and convert each to markdown
+    # @TODO test docx+empty_paragraphs extension to read newlines from docx
     do
       echo "[+] converting $SELECTED to markdown..."
       # Change output extension

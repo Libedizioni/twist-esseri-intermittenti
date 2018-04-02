@@ -56,7 +56,7 @@
   },
 
 
-  "version": "0.1.3",
+  "version": "0.2.0",
   "cover": "inc/images/cover.jpg",
   "fonts": "inc/fonts",
   "images": "inc/images",
@@ -85,7 +85,7 @@
   },
   "templates": {
     "epub": "templates/epub/libe.epub",
-    "epub3": "templates/epub/default.epub3",
+    "epub3": "templates/epub/libe.epub3",
     "pdf": "templates/pdf/libe-novel.tex",
     "latex": "templates/pdf/default.latex",
     "html": "templates/default.html",
