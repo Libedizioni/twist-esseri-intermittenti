@@ -48,7 +48,7 @@ rm templog
 git add .
 # ----------------------------------------------------------------------------
 # 7  - Commit changes
-if [[ "${current_branch}" == "master" ]]; then
+if [ "${current_branch}" == "master" ]; then
   git commit -m "Release hotfix in ${new_book_tag}"
 else
   git commit -m "Update CHANGELOG.md and version to ${new_book_tag}"
@@ -57,7 +57,7 @@ fi
 # 8  - Switch branch from feature to develop (if applicable)
 # 9 - Merge feature branch into develop (if applicable)
 # 10 - Remove merged feature branch (if applicable)
-if [ "${current_branch}" != "develop" ] && [ "${current_branch}" != "master" ]; then
+if [[ "${current_branch}" != "develop" ]] && [[ "${current_branch}" != "master" ]]; then
   git checkout develop && \
   git merge --no-ff --no-edit -m "Prepare release for ${new_book_tag}" "${current_branch}" && \
   git branch -d "${current_branch}"
