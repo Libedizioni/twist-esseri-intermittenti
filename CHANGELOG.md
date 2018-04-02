@@ -2,11 +2,19 @@
 #### _changelog & history_
 
 
+**v0.2.1**
+- Add grunt/aliases from ebook-generator repo
+- Fix changelog-version-tag script & CHANGELOG.md
+
 **v0.2.0**
 - _New Features:_
     - Add TODO for pandoc empty paragraphs extension
     - Add scss link & footnotes styles
 - _Updates:_
+**v0.2.1**
+- Add grunt/aliases from ebook-generator repo
+- Fix changelog-version-tag script & CHANGELOG.md
+
     - Update CHANGELOG.md and version to v0.2.0
     - Update & compile src docx with correct shortcuts
     - Update epub3 pandoc template for libe
