@@ -24,9 +24,9 @@ build_epub() {
   mkdir -p "$BUILD/epub"
 
   # build the ebook with defined parameters
-  pandoc \
-    --read=markdown-implicit_figures-smart \
-    --write=epub+smart \
+  pandoc --quiet \
+    --read=markdown-implicit_figures+header_attributes-space_in_atx_header \
+    --write=epub2 \
     --self-contained \
     --epub-chapter-level=1 \
     --template="$TEMPLATE_EPUB" \

@@ -44,13 +44,13 @@ build_pdf_calibre() {
   mv "$EPUB" "$ZIP"
   unzip -d "$BUILD/pdf/$BOOKNAME" "$ZIP"
   if [ ! -z $ISBN_PDF ]; then
-    sed -i "s/$ISBN_EPUB/$ISBN_PDF/g" "$BUILD/pdf/$BOOKNAME/ch002.xhtml"
-    sed -i "s/$ISBN_EPUB/$ISBN_PDF/g" "$BUILD/pdf/$BOOKNAME/content.opf"
-    sed -i "s/$ISBN_EPUB/$ISBN_PDF/g" "$BUILD/pdf/$BOOKNAME/toc.ncx"
+    sed -i "s/$ISBN_EPUB/$ISBN_PDF/g" "$BUILD/pdf/$BOOKNAME/EPUB/text/ch002.xhtml"
+    sed -i "s/$ISBN_EPUB/$ISBN_PDF/g" "$BUILD/pdf/$BOOKNAME/EPUB/content.opf"
+    sed -i "s/$ISBN_EPUB/$ISBN_PDF/g" "$BUILD/pdf/$BOOKNAME/EPUB/toc.ncx"
   else
-    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/pdf/$BOOKNAME/ch002.xhtml"
-    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/pdf/$BOOKNAME/content.opf"
-    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/pdf/$BOOKNAME/toc.ncx"
+    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/pdf/$BOOKNAME/EPUB/text/ch002.xhtml"
+    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/pdf/$BOOKNAME/EPUB/content.opf"
+    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/pdf/$BOOKNAME/EPUB/toc.ncx"
   fi
   rm "$ZIP"
   cd "$BUILD/pdf/$BOOKNAME"

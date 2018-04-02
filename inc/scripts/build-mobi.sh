@@ -30,13 +30,13 @@ build_mobi_kindlegen() {
   mv "$EPUB" "$ZIP"
   unzip -d "$BUILD/mobi/$BOOKNAME" "$ZIP"
   if [ ! -z $ISBN_MOBI ]; then
-    sed -i "s/$ISBN_EPUB/$ISBN_MOBI/g" "$BUILD/mobi/$BOOKNAME/ch002.xhtml"
-    sed -i "s/$ISBN_EPUB/$ISBN_MOBI/g" "$BUILD/mobi/$BOOKNAME/content.opf"
-    sed -i "s/$ISBN_EPUB/$ISBN_MOBI/g" "$BUILD/mobi/$BOOKNAME/toc.ncx"
+    sed -i "s/$ISBN_EPUB/$ISBN_MOBI/g" "$BUILD/mobi/$BOOKNAME/EPUB/text/ch002.xhtml"
+    sed -i "s/$ISBN_EPUB/$ISBN_MOBI/g" "$BUILD/mobi/$BOOKNAME/EPUB/content.opf"
+    sed -i "s/$ISBN_EPUB/$ISBN_MOBI/g" "$BUILD/mobi/$BOOKNAME/EPUB/toc.ncx"
   else
-    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/mobi/$BOOKNAME/ch002.xhtml"
-    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/mobi/$BOOKNAME/content.opf"
-    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/mobi/$BOOKNAME/toc.ncx"
+    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/mobi/$BOOKNAME/EPUB/text/ch002.xhtml"
+    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/mobi/$BOOKNAME/EPUB/content.opf"
+    sed -i "s/ISBN $ISBN_EPUB//g" "$BUILD/mobi/$BOOKNAME/EPUB/toc.ncx"
   fi
   rm "$ZIP"
   cd "$BUILD/mobi/$BOOKNAME"
