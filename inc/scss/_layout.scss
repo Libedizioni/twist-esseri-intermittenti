@@ -24,6 +24,14 @@ body {
 
 a {
 	color: $link_color;
+
+	&:hover {
+		color: $link_hover;
+	}
+
+	&:focus {
+		color: $link_focus;
+	}
 }
 
 b,
