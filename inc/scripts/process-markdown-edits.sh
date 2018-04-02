@@ -35,7 +35,7 @@ process_markdown_edits() {
       # differs from other tags
       sed -i 's/{QUOTE}/>/g' "$SELECTED"
       # search and escape list items inside dialogue sections
-      sed -i '/{+DIALOGUE+}/,/{-DIALOGUE-}/s/-/\\\-/g' "$SELECTED"
+      sed -i '/{+DIALOGUE+}/,/{-DIALOGUE-}/s/-/\-/g' "$SELECTED"
       # search and remove DIALOGUE docx tag
       sed -i 's/{+DIALOGUE+}//g; s/{\\-DIALOGUE\\-}//g' "$SELECTED"
       # search and replace vertically centered divs
