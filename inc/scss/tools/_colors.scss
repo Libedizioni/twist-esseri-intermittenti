@@ -11,30 +11,10 @@
 /// Light Gray palette link:
 ///
 
-/// - purple
-/// @type String
-/// @group colors_peace
-$purple: #800080;
-/// - blue
-/// @type String
-/// @group colors_peace
-$blue: #00f;
 /// - azure
 /// @type String
 /// @group colors_peace
 $azure: #007fff;
-/// - green
-/// @type String
-/// @group colors_peace
-$green: #008000;
-/// - yellow
-/// @type String
-/// @group colors_peace
-$yellow: #ff0;
-/// - orange
-/// @type String
-/// @group colors_peace
-$orange: #ffa500;
 /// - red
 /// @type String
 /// @group colors_peace
@@ -63,14 +43,6 @@ $light_gray:        #ddd;
 $gray:              #cbcacb;
 $medium_gray:       #979797;
 $dark_gray:         #5c5c5c;
-/// Alfa transparent Gray
-/// @type String
-$alfa_white:        rgba( $white, .7 );
-$alfa_dirt_white:   rgba( $dirt_white, .3 );
-$alfa_light_gray:   rgba( $light_gray, .7 );
-$alfa_medium_gray:  rgba( $medium_gray, .5 );
-$alfa_dark_gray:    rgba( $dark_gray, .3 );
-$alfa_black:        rgba( $dirt-black, 0.3 );
 
 ///
 /// Blue variants
@@ -80,10 +52,6 @@ $lighter_blue:      lighten( $azure, 30% );
 $light_blue:        lighten( $azure, 20% );
 $dark_blue:         darken( $azure, 20% );
 $darker_blue:       darken( $azure, 30% );
-/// Alfa transparent Blue
-/// @type String
-$alfa_light_blue:   rgba( $light_blue, .75 );
-$alfa_dark_blue:    rgba( $dark_blue, .65 );
 
 /// Semantic color assignments:
 /// we set functional variables based on component use
@@ -101,6 +69,9 @@ $footer_text_color: '';
 $link_color:        $red;
 $link_hover:        adjust-hue( darken( $link_color, 9% ), 3% );
 $link_focus:        darken( desaturate( adjust-hue( $link_color, 2% ), 23% ), 19% );
+$notes_link_color:  $dark_blue;
+$notes_link_hover:  $darker_blue;
+$notes_link_focus:  $azure;
 
 /// TOC Commons
 /// @type String
