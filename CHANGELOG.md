@@ -2,6 +2,9 @@
 #### _changelog & history_
 
 
+**v0.2.2**
+- Fix CHANGELOG parsing
+
 **v0.2.1**
 - Add grunt/aliases from ebook-generator repo
 - Fix changelog-version-tag script & CHANGELOG.md
